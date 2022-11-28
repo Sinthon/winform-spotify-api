@@ -31,6 +31,8 @@ namespace Spotify_API.Views.Constrols
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.labelPopularity = new System.Windows.Forms.Label();
+            this.labelFollowers = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,17 +49,39 @@ namespace Spotify_API.Views.Constrols
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.Location = new System.Drawing.Point(126, 10);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(42, 24);
+            this.labelTitle.Size = new System.Drawing.Size(50, 27);
             this.labelTitle.TabIndex = 1;
             this.labelTitle.Text = "title";
+            // 
+            // labelPopularity
+            // 
+            this.labelPopularity.AutoSize = true;
+            this.labelPopularity.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPopularity.Location = new System.Drawing.Point(126, 45);
+            this.labelPopularity.Name = "labelPopularity";
+            this.labelPopularity.Size = new System.Drawing.Size(66, 14);
+            this.labelPopularity.TabIndex = 2;
+            this.labelPopularity.Text = "Popularity ";
+            // 
+            // labelFollowers
+            // 
+            this.labelFollowers.AutoSize = true;
+            this.labelFollowers.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFollowers.Location = new System.Drawing.Point(127, 66);
+            this.labelFollowers.Name = "labelFollowers";
+            this.labelFollowers.Size = new System.Drawing.Size(62, 14);
+            this.labelFollowers.TabIndex = 3;
+            this.labelFollowers.Text = "Followers ";
             // 
             // SearchResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelFollowers);
+            this.Controls.Add(this.labelPopularity);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBox1);
             this.Name = "SearchResult";
@@ -73,5 +97,7 @@ namespace Spotify_API.Views.Constrols
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label labelPopularity;
+        private System.Windows.Forms.Label labelFollowers;
     }
 }

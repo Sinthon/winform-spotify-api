@@ -37,13 +37,13 @@ namespace Spotify_API.Helpers
             token = Newtonsoft.Json.JsonConvert.DeserializeObject<Token>(msg);
         }
 
-        public static SpotifySearch.SpotifyResult SearchArtistOrSong(string searchWord)
+        public static SpotifySearch.SpotifyResult SearchArtist(string searchWord, string type = "artist")
         {
             var client = new RestClient("https://api.spotify.com/v1/search");
 
             client.AddDefaultHeader("Authorization", $"Bearer {token.access_token}");
 
-            var request = new RestRequest($"?q={searchWord}&type=artist", Method.Get);
+            var request = new RestRequest($"?q={searchWord}&type={type}", Method.Get);
 
             var response = client.Execute(request);
 
@@ -54,7 +54,6 @@ namespace Spotify_API.Helpers
             }
             else
             {
-                Console.WriteLine(response.Content);
                 return new SpotifySearch.SpotifyResult();
             }
         }

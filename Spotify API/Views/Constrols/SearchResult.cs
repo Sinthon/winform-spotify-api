@@ -28,5 +28,17 @@ namespace Spotify_API.Views.Constrols
             get => this.labelTitle.Text;
             set => labelTitle.Text = value;
         }
+
+        public string Followers
+        {
+            set => labelFollowers.Text = value;
+            get => labelFollowers.Text;
+        }
+
+        public string Popularity
+        {
+            get => labelPopularity.Text;
+            set => labelPopularity.Text = value;
+        }
     }
 }
